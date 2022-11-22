@@ -78,5 +78,5 @@ Material:
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _TransparentColourKey: {r: 0.018022425, g: 0.254717, b: 0.018557066, a: 0}
+    - _TransparentColourKey: {r: 0.019607844, g: 0.25490198, b: 0.019607844, a: 0}
   m_BuildTextureStacks: []
