@@ -408,7 +408,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 963194225}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03da81bda4e3635448ff6a8630cec1d5, type: 3}
+  m_Script: {fileID: 11500000, guid: 8df1e35cbf4843f46aa396898712321d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 2100000, guid: 0d9c0917614b05b4b8186cb6ca553411, type: 2}
@@ -424,7 +424,6 @@ GameObject:
   - component: {fileID: 1083732464}
   - component: {fileID: 1083732463}
   - component: {fileID: 1083732462}
-  - component: {fileID: 1083732461}
   m_Layer: 5
   m_Name: Button (Legacy)
   m_TagString: Untagged
@@ -453,19 +452,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1083732461
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1083732459}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a4e2b2c07a8cbf2488b1d6944a44ea92, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  obj: {fileID: 850978714}
 --- !u!114 &1083732462
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -509,19 +495,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1083732463}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1083732461}
-        m_TargetAssemblyTypeName: Test, Assembly-CSharp
-        m_MethodName: TestClick
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1083732463
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -572,6 +546,7 @@ GameObject:
   - component: {fileID: 1264847237}
   - component: {fileID: 1264847236}
   - component: {fileID: 1264847235}
+  - component: {fileID: 1264847239}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -661,6 +636,20 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1264847239
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1264847234}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4e2b2c07a8cbf2488b1d6944a44ea92, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Btn: {fileID: 1083732462}
+  obj: {fileID: 850978714}
 --- !u!1 &1661227019
 GameObject:
   m_ObjectHideFlags: 0

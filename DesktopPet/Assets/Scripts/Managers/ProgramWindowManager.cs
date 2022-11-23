@@ -2,12 +2,8 @@ using System;
 using System.Runtime.InteropServices;
 using UnityEngine;
 
-public class ProgramWindowManager : MonoBehaviour
+public class ProgramWindowManager : Singleton<ProgramWindowManager>
 {
-    [SerializeField]
-    private Material m_Material;
-
-
     private struct MARGINS
     {
         public int cxLeftWidth;
@@ -20,29 +16,11 @@ public class ProgramWindowManager : MonoBehaviour
 
     private IntPtr _hwnd;
 
-    void Start()
+
+    public void Initialized()
     {
-#if !UNITY_EDITOR
-     Initialized();
-#endif
+        Debug.Log("ProgramWindowManager OnInitialized");
 
-    }
-
-    private void Update()
-    {
-#if !UNITY_EDITOR
-        MoveWindow();
-#endif
-
-    }
-
-    void OnRenderImage(RenderTexture from, RenderTexture to)
-    {
-        Graphics.Blit(from, to, m_Material);
-    }
-
-    private void Initialized()
-    {
         _hwnd = GetForegroundWindow();
 
         // 设置窗口的属性
@@ -54,8 +32,9 @@ public class ProgramWindowManager : MonoBehaviour
     }
 
 
-    void MoveWindow()
+    public void MoveWindow()
     {
+        Debug.Log("ProgramWindowManager OnMoveWindow");
         // 保持窗口始终在最前面
         if (_hwnd != GetForegroundWindow())
         {
