@@ -20,7 +20,6 @@ public class ProgramWindowTest : MonoBehaviour
 #if !UNITY_EDITOR
            ProgramWindowManager.getInstance().Initialized();
            ProgramWindowManager.getInstance().MoveWindow();
-
 #endif
     }
 
